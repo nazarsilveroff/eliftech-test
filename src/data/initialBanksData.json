@@ -1,0 +1,26 @@
+[{
+  "bankName": "First Bank",
+  "interestRate": 4,
+  "maximumLoan": 300000,
+  "minimumDownPayment": 60000,
+  "loanTerm": 12
+},{
+  "bankName": "Second Bank",
+  "interestRate": 2,
+  "maximumLoan": 280000,
+  "minimumDownPayment": 56000,
+  "loanTerm": 6
+},{
+  "bankName": "Thirst Bank",
+  "interestRate": 3,
+  "maximumLoan": 100000,
+  "minimumDownPayment": 20000,
+  "loanTerm": 20
+},{
+  "bankName": "Fourth Bank",
+  "interestRate": 5,
+  "maximumLoan": 1000000,
+  "minimumDownPayment": 200000,
+  "loanTerm": 24
+}
+]
