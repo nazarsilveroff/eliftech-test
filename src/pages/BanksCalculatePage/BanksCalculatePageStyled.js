@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MortgageCalculatorPageStyled = styled.div`
+export const BanksCalculatePageStyled = styled.div`
   text-align: center;
   width: 95%;
   margin: 0 auto;

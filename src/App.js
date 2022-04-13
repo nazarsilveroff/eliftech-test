@@ -2,23 +2,22 @@ import {AppStyled} from "./AppStyled";
 import {Link, Route, Routes} from "react-router-dom";
 import React, {Suspense, useEffect} from 'react';
 import BanksManagementPage from "./pages/BanksManagementPage/BanksManagementPage";
-import MortgageCalculatorPage from "./pages/MortgageCalculatorPage/MortgageCalculatorPage";
-import {BanksSelector} from "./redux/banks/banksSelectors";
+import BanksCalculatePage from "./pages/BanksCalculatePage/BanksCalculatePage";
 import {useDispatch, useSelector} from "react-redux";
-import {addBanks} from "./redux/banks/banksSlice";
+import {addBanks, BanksSelector} from "./redux/banks/banksSlice";
 
 
 function App() {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    const redxBanks = useSelector(BanksSelector)
-    const localStBanks = JSON.parse(localStorage.getItem('banks'))
+    const reduxBanks = useSelector(BanksSelector);
+    const localStBanks = JSON.parse(localStorage.getItem('banks'));
 
     useEffect(() => {
-        if (localStBanks && redxBanks.length !== localStBanks.length) {
+        if (localStBanks && reduxBanks.length !== localStBanks.length) {
             dispatch(addBanks(localStBanks))
         }
-    }, [])
+    }, []);
 
     return (
         <AppStyled>
@@ -30,7 +29,7 @@ function App() {
                 <Suspense fallback='loading...'>
                     <Routes>
                         <Route path='/banks-management-page' exact element={<BanksManagementPage/>}/>
-                        <Route path='/mortgage-calculator-page' exact element={<MortgageCalculatorPage/>}/>
+                        <Route path='/banks-calculate-page' exact element={<BanksCalculatePage/>}/>
                     </Routes>
                 </Suspense>
             </div>

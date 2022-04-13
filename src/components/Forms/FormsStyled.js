@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const FormForBanksManagementPageStyled = styled.div`
+export const FormsStyled = styled.div`
   h1{
     padding-top: 20px;
   }
@@ -22,7 +22,7 @@ export const FormForBanksManagementPageStyled = styled.div`
         color: red;
         font-size: 14px;
       }
-      input{
+      input,select{
         width: 100%;
         padding: 5px;
         border: 1px solid #ccc;
@@ -37,16 +37,16 @@ export const FormForBanksManagementPageStyled = styled.div`
       }
     }
     button{
+      width: 100%;
       font-size: 16px;
       font-weight: bold;
       text-transform: uppercase;
-      padding: 10px;
-      margin: 15px auto;
+      padding: 5px;
+      margin: 5px auto 0;
       border: 1px solid #ccc;
-      border-radius: 10px;
-      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      background-color: transparent;
+      border-radius: 3px;
+      cursor: pointer;
     }
   }
 `
